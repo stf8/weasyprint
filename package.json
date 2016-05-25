@@ -1,0 +1,14 @@
+{
+  "name": "weasyprint",
+  "version": "1.0.0",
+  "description": "weasyprint interface for node",
+  "main": "index.js",
+  "scripts": {
+    "install": "virtualenv --system-site-packages ./venv && . ./venv/bin/activate && pip install WeasyPrint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tmp": "0.0.28"
+  }
+}
