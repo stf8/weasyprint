@@ -6,8 +6,8 @@
   "scripts": {
     "install": "virtualenv --system-site-packages ./venv && . ./venv/bin/activate && pip install WeasyPrint"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Stéphane Mariel",
+  "license": "BSD",
   "dependencies": {
     "tmp": "0.0.28"
   }
