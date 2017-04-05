@@ -4,7 +4,7 @@
   "description": "weasyprint interface for node",
   "main": "index.js",
   "scripts": {
-    "install": "virtualenv --system-site-packages ./venv && . ./venv/bin/activate && pip install WeasyPrint"
+    "install": "which weasyprint || (virtualenv --system-site-packages ./venv && . ./venv/bin/activate && pip install --upgrade setuptools && pip install --upgrade webencodings && pip install --upgrade WeasyPrint)"
   },
   "author": "Stéphane Mariel",
   "license": "BSD",

@@ -1,4 +1,13 @@
-var exec = require('child_process').exec, tmp = require('tmp'), path = require('path');
+var { exec, execSync } = require('child_process').exec, tmp = require('tmp'), path = require('path');
+
+var command;
+try {
+	execSync('which weasyprint');
+	command = 'weasyprint';
+} catch(e) {
+	command = '. '+ path.resolve(__dirname, 'venv/bin/activate')+' && weasyprint';
+}
+
 module.exports = (function() {
 	'use strict';
 	return {
@@ -11,7 +20,7 @@ module.exports = (function() {
 					first = false;
 					cb.apply(undefined, arguments);
 				}
-				var child = exec('. '+ path.resolve(__dirname, 'venv/bin/activate')+' && weasyprint - "'+tmppath+'"', function(err, stdout, stderr) {
+				var child = exec(command+' - "'+tmppath+'"', function(err, stdout, stderr) {
 					if (err) {
 						cleanup();
 						return firstcb(err); 
