@@ -1,4 +1,4 @@
-var { exec, execSync } = require('child_process').exec, tmp = require('tmp'), path = require('path');
+var childprocess = require('child_process'), exec = childprocess.exec, execSync childprocess.execSync, tmp = require('tmp'), path = require('path');
 
 var command;
 try {
