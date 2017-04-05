@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "weasyprint interface for node",
   "main": "index.js",
+  "scripts": {
+    "install": "virtualenv --system-site-packages ./venv && . ./venv/bin/activate && pip install WeasyPrint"
+  },
   "author": "Stéphane Mariel",
   "license": "BSD",
   "dependencies": {
